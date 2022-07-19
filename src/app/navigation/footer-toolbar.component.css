@@ -1,0 +1,25 @@
+.rr-case {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+footer {
+  bottom: 0;
+  color: #212121;
+  left: 0;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  /* border-top: 1px solid rgba(120, 130, 140, 0.13); */
+  background-color: #bdbdbd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  margin-bottom: 0;
+  margin-right: 5px;
+}
