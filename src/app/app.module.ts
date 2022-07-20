@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from '@auth0/auth0-angular';
 
 import { NavigationModule } from './navigation/navigation.module';
 import { GameModule } from './game/game.module';
@@ -29,6 +30,9 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    AuthModule.forRoot({
+      ...environment.auth,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,11 +3,11 @@ import { AuthService } from '@auth0/auth0-angular';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-  selector: 'app-auth-button',
-  templateUrl: './app-auth-button.component.html',
-  styleUrls: ['./app-auth-button.component.css'],
+  selector: 'app-auth-menu',
+  templateUrl: './app-auth-menu.component.html',
+  styleUrls: [],
 })
-export class AppAuthButtonComponent {
+export class AppAuthMenuComponent {
   constructor(
     @Inject(DOCUMENT) public document: Document,
     public auth: AuthService

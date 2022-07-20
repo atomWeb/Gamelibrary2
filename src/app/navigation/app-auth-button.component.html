@@ -1,1 +1,14 @@
-<p>app-auth-button works!</p>
+<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button (click)="auth.logout({ returnTo: document.location.origin })" aria-label="Log out buttob">
+        <mat-icon>logout</mat-icon>
+    </button>
+</ng-container>
+
+<ng-template #loggedOut>
+    <button mat-icon-button (click)="auth.loginWithRedirect()" aria-label="Log in button">
+        <mat-icon>login</mat-icon>
+    </button>
+</ng-template>

@@ -15,7 +15,7 @@
     <span>gameLib</span>
     <span class="spacer"></span>
     <div *ngIf="(isHandset$ | async) === false" class="nav-menu">
-      <button mat-button>
+      <button mat-button (click)="gameList()">
         <mat-icon>gamepad</mat-icon>
         <span>Juegos</span>
       </button>
@@ -23,19 +23,14 @@
         <mat-icon>settings</mat-icon>
         <span>Administrar</span>
       </button>
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-        <mat-icon>account_circle</mat-icon>
-      </button>
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
-        <mat-icon>logout</mat-icon>
-      </button>
+      <app-auth-button></app-auth-button>   
     </div>
     <button *ngIf="isHandset$ | async" mat-icon-button [matMenuTriggerFor]="menu"
       aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item (click)="gameList()">
         <mat-icon>gamepad</mat-icon>
         <span>Juegos</span>
       </button>
@@ -43,14 +38,7 @@
         <mat-icon>settings</mat-icon>
         <span>Administrar</span>
       </button>
-      <button mat-menu-item>
-        <mat-icon>account_circle</mat-icon>
-        <span>Perfil</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>logout</mat-icon>
-        <span>LogOut</span>
-      </button>
+      <app-auth-menu></app-auth-menu>
     </mat-menu>
   </mat-toolbar>
 </section>

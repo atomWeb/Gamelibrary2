@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { MainNavToolbarComponent } from './main-nav-toolbar.component';
 import { AppAuthButtonComponent } from './app-auth-button.component';
+import { AppAuthMenuComponent } from './app-auth-menu.component';
 import { FooterToolbarComponent } from './footer-toolbar.component';
 import { NotFoundComponent } from './not-found.component';
 
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './not-found.component';
   declarations: [
     MainNavToolbarComponent,
     AppAuthButtonComponent,
+    AppAuthMenuComponent,
     FooterToolbarComponent,
     NotFoundComponent,
   ],
